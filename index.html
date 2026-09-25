@@ -229,6 +229,34 @@ pre.xml .c{color:#6f8aa8;font-style:italic}
 .duo-hl .vsgrid>div{font-size:16px}
 .duo-hl .analog>div{background:#0d2238;border:1px solid var(--line);color:#fff}
 .duo-hl .analog p{color:#c3d0de}
+.duo-hl .vsgrid{background:var(--card);border:1px solid #1d4b73;box-shadow:0 30px 80px rgba(0,163,225,.18);border-radius:20px;color:#dbe5f0;overflow:hidden}
+.duo-hl .vsgrid>div{border-top:1px solid #16395c;font-size:15.5px;padding:18px 22px}
+.duo-hl .vsgrid .vh{border-top:0;background:var(--card)}
+.duo-hl .vsgrid .vh.pr{background:linear-gradient(135deg,#1DABAF,#168f92);color:#fff}
+.duo-hl .vsgrid .vh.ac{background:linear-gradient(135deg,#00A3E1,#0086bb);color:#fff}
+.duo-hl .vsgrid .vl{background:#0b2240;color:#8fb3d6}
+.duo-hl .vsgrid .cpr b,.duo-hl .vsgrid .cac b{color:#fff}
+.duo-hl .vsgrid .cpr{border-left:1px solid #16395c}
+.duo-hl .vsgrid .cac{border-left:1px solid #16395c}
+.duo-hl .together{background:#0d2238;border:1px solid var(--line);box-shadow:none;color:#dbe5f0;grid-template-columns:1fr;justify-items:center;text-align:center}
+.duo-hl .together .msg{background:#132d4b;color:#fff}
+.duo-hl .together .routes{color:#8fb3d6;justify-content:center}
+.duo-hl .together .routes b{color:#fff}
+.duo-hl .together .qr{background:transparent;color:#7cc8ff;border-color:#3ea0e6}
+.duo-hl .together p{color:#8fb3d6}
+.duo-hl .analog{margin-top:18px}
+.head{max-width:900px}
+.xmlgrid{align-items:start}
+.facts{grid-template-columns:1fr;gap:0;background:#fff;border-radius:16px;box-shadow:0 12px 34px rgba(10,36,64,.06);padding:6px 20px}
+.facts li{box-shadow:none;border-radius:0;background:transparent;border-bottom:1px solid var(--cloud);padding:12px 0}
+.facts li:last-child{border-bottom:0}
+.loop.bench div>b{display:block;margin-bottom:10px}
+.loop.bench .bnum{display:block;font-size:30px;line-height:1.1}
+.loop.bench .bl{display:block;font-family:var(--body);font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--slate);margin-top:4px}
+.steps7{display:flex;flex-wrap:wrap;justify-content:center}
+.steps7 .dcard{flex:0 0 calc(25% - 12px)}
+@media (max-width:1000px){.steps7 .dcard{flex-basis:calc(50% - 8px)}}
+@media (max-width:600px){.steps7 .dcard{flex-basis:100%}}
 /* flow */
 .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:f}
 .flow .dcard{position:relative}
@@ -451,7 +479,7 @@ html.pdf-mode #check,html.pdf-mode #trouble{break-before:page}
 <div class="wrap">
 <div>
 <p class="label">Cheat sheet for CS and Sales</p>
-<h1>Product Recommender, <span class="s">in plain words</span></h1>
+<h1><span style="white-space:nowrap">Product Recommender,</span><br/><span class="s">in plain words</span></h1>
 <p class="lead">What it is, how it works, what it needs, and how to set it up and fix it.</p>
 <div class="rule"><div><small>If you remember 1 thing</small><b>The bot only knows what is saved in the Product base. Nothing else.</b></div></div>
 </div>
@@ -494,7 +522,7 @@ html.pdf-mode #check,html.pdf-mode #trouble{break-before:page}
   <span class="t">&lt;g:title&gt;</span>2021 Toyota RAV4 Plug-in Hybrid<span class="t">&lt;/g:title&gt;</span>
   <span class="t">&lt;g:description&gt;</span>Automatic SUV, 27,600 mi, white<span class="t">&lt;/g:description&gt;</span>
   <span class="t">&lt;g:link&gt;</span>https://dealer.example.com/rav4-3108<span class="t">&lt;/g:link&gt;</span>
-  <span class="t">&lt;g:image_link&gt;</span>https://dealer.example.com/img/rav4-3108.jpg<span class="t">&lt;/g:image_link&gt;</span>
+  <span class="t">&lt;g:image_link&gt;</span>https://dealer.example.com/rav4.jpg<span class="t">&lt;/g:image_link&gt;</span>
   <span class="t">&lt;g:price&gt;</span>28995.00 GBP<span class="t">&lt;/g:price&gt;</span>
   <span class="t">&lt;g:availability&gt;</span>in_stock<span class="t">&lt;/g:availability&gt;</span>
   <span class="t">&lt;g:product_type&gt;</span>Used cars &gt; SUV<span class="t">&lt;/g:product_type&gt;</span>
@@ -569,7 +597,7 @@ html.pdf-mode #check,html.pdf-mode #trouble{break-before:page}
 <div class="wrap">
 <div class="head">
 <p class="label">Product Recommender vs AI Chat</p>
-<h2>Almost the same engine, <span class="s">different outcome</span></h2>
+<h2>Almost the same engine,<br/><span class="s">different outcome</span></h2>
 <p class="sub">A <b>Product base</b> is a special kind of <b>Knowledge Base</b>, built from a feed. Problems and diagnosis are very similar.</p>
 </div>
 <div class="vsgrid">
@@ -600,10 +628,10 @@ html.pdf-mode #check,html.pdf-mode #trouble{break-before:page}
 <p class="sub" style="color:#e6f6fd">Recommendation CTR is usually 30-50%.</p>
 </div>
 <div class="loop bench">
-<div><b><i class="bnum">€25,253.86</i> revenue</b><p>B2B cosmetics packaging shop, <b>3 months</b>. <b>57 orders</b> from bot users, <b>48.8%</b> CTR.</p></div>
-<div><b><i class="bnum">52.7%</i> CTR</b><p>Car dealer, <b>3 weeks</b>. <b>69.0%</b> on the inpage bot.</p></div>
-<div><b><i class="bnum">38.9%</i> CTR</b><p>Furniture and sleep shop, <b>3 weeks</b>. <b>84%</b> of product searches continued into AI.</p></div>
-<div><b><i class="bnum">26-37%</i></b><p>of all conversations start with product help.</p></div>
+<div><b><i class="bnum">€25,253.86</i><small class="bl">revenue</small></b><p>B2B cosmetics packaging shop, <b>3 months</b>. <b>57 orders</b> from bot users, <b>48.8%</b> CTR.</p></div>
+<div><b><i class="bnum">52.7%</i><small class="bl">CTR</small></b><p>Car dealer, <b>3 weeks</b>. <b>69.0%</b> on the inpage bot.</p></div>
+<div><b><i class="bnum">38.9%</i><small class="bl">CTR</small></b><p>Furniture and sleep shop, <b>3 weeks</b>. <b>84%</b> of product searches continued into AI.</p></div>
+<div><b><i class="bnum">26-37%</i><small class="bl">product conversations</small></b><p>Share of all conversations that start with product help.</p></div>
 </div>
 </div>
 </section>
@@ -612,7 +640,7 @@ html.pdf-mode #check,html.pdf-mode #trouble{break-before:page}
 <div class="wrap">
 <div class="head">
 <p class="label">The 1 rule</p>
-<h2>The bot reads the Product base, <span class="s">not the website</span></h2>
+<h2>The bot reads the Product base,<br/><span class="s">not the website</span></h2>
 <p class="sub">A detail that is only on the website does not exist for the bot.</p>
 </div>
 <div class="sot">
@@ -674,7 +702,7 @@ Family SUV, cheap to run for daily commuting.<span class="t">&lt;/g:description&
 <div class="wrap">
 <div class="head">
 <p class="label">Setup and fix</p>
-<h2>The first version is a test, <span class="s">not the final result</span></h2>
+<h2>The first version is a test,<br/><span class="s">not the final result</span></h2>
 <p class="sub">No bot reaches its target quality on the first try. Tell the client at the start. Use the same flow for a new bot and for fixing an existing one.</p>
 </div>
 <div aria-live="polite" class="progress">
@@ -743,7 +771,7 @@ Family SUV, cheap to run for daily commuting.<span class="t">&lt;/g:description&
 <footer>
 <div class="wrap">
 <img alt="Leadoo AI" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5OTcuMzcgMTIyLjU5Ij4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjMDBhM2UxOwogICAgICB9CgogICAgICAuY2xzLTIgewogICAgICAgIGZpbGw6ICNmZmY7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxnIGlkPSJJY29uIj4KICAgIDxnIGlkPSJJY29uLTIiIGRhdGEtbmFtZT0iSWNvbiI+CiAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTI0OS44NCw2MS4yOWMwLDMzLjc5LTI3LjQzLDYxLjI3LTYxLjE1LDYxLjI3LTIyLjQ0LDAtNDEuNDUtMTMuMjYtNTQuOTMtMjYuNjksNy40OC04LjcsMTYuNTktMjIuNDcsMTcuODQtMjQuMDQsMTAuMDIsMTAuNzMsMjMuNTEsMjEuMjQsMzcuMSwyMS4yNCw0Ljg2LDAsOS40OC0xLjEsMTMuNi0zLjA3aC4wMWwyMS4wNSw2LjA2LTUuODQtMjEuNWgwYzEuODUtNC4wNCwyLjg5LTguNTQsMi44OS0xMy4yNiwwLTguNzYtMy41Ni0xNi43MS05LjMtMjIuNDctNS43NC01Ljc1LTEzLjY3LTkuMzItMjIuNDEtOS4zMmgtLjAxYy0xMi42NywwLTI4LjM3LDEzLjEtMzkuNzcsMjUuNDktNC44NCw1LjI2LTE2LjQzLDIxLjk0LTIxLjgsMjguNjUtMTIuODQsMTYuMDMtMzYuMzcsMzguOTQtNjUuOTUsMzguOTQtLjEsMC0uMTktLjAzLS4yOS0uMDNDMjcuMjcsMTIyLjM4LDAsOTQuOTcsMCw2MS4yOVMyNy40My4wMSw2MS4xNS4wMUM4My43Ny4wMSwxMDMuMDEsMTMuNjgsMTE2LjU1LDI3LjI4Yy03LjMsOC4xNi0xNy4wMywyMi4zNC0xOC4wNywyMy44MS0xMC4xMS0xMC44My0yMy43Ni0yMS41OS0zNy4zMy0yMS41OS0xNy40OCwwLTMxLjcxLDE0LjI3LTMxLjcxLDMxLjc5LDAsNC43MiwxLjAzLDkuMiwyLjg5LDEzLjIzbC01Ljg1LDIxLjUzLDIxLjA4LTYuMDdjNC4xMiwxLjk4LDguNzMsMy4wOSwxMy42LDMuMDloMGMxNS44Ni4wMSwzMS41OS0xNC4yNiw0MS43OC0yNi40OCw0LjItNS4wNCwxNS4zOC0yMS41NCwyMS45OS0yOS4wNkMxMzguNzcsMjEuNzcsMTYyLjYzLDAsMTg4LjY3LDBjLjAxLDAsLjAxLjAxLjAzLjAxLDMzLjcyLjAxLDYxLjE0LDI3LjQ4LDYxLjE0LDYxLjI3WiIvPgogICAgICA8ZWxsaXBzZSBjbGFzcz0iY2xzLTEiIGN4PSI3Ni45NSIgY3k9IjYxLjI5IiByeD0iNC43MiIgcnk9IjQuNzMiLz4KICAgICAgPGVsbGlwc2UgY2xhc3M9ImNscy0xIiBjeD0iNjIuMjEiIGN5PSI2MS4yOSIgcng9IjQuNzIiIHJ5PSI0LjczIi8+CiAgICAgIDxlbGxpcHNlIGNsYXNzPSJjbHMtMSIgY3g9IjQ3LjQ4IiBjeT0iNjEuMjkiIHJ4PSI0LjcyIiByeT0iNC43MyIvPgogICAgICA8ZWxsaXBzZSBjbGFzcz0iY2xzLTEiIGN4PSIyMDIuMzUiIGN5PSI2MS4yOSIgcng9IjQuNzIiIHJ5PSI0LjczIi8+CiAgICAgIDxlbGxpcHNlIGNsYXNzPSJjbHMtMSIgY3g9IjE4Ny42MSIgY3k9IjYxLjI5IiByeD0iNC43MiIgcnk9IjQuNzMiLz4KICAgICAgPGVsbGlwc2UgY2xhc3M9ImNscy0xIiBjeD0iMTcyLjg4IiBjeT0iNjEuMjkiIHJ4PSI0LjcyIiByeT0iNC43MyIvPgogICAgPC9nPgogIDwvZz4KICA8ZyBpZD0iT3V0bGluZXMiPgogICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMzA5Ljg0LjAxaDE5Ljg5djEwMS40OWg2My40M3YxOC41MWgtODMuMzJWLjAxWiIvPgogICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMzk2LjkzLDc3LjVjMC0yNy4wOSwxNy42Ni00NC45Miw0My44OS00NC45MiwyOS44MywwLDQ2LjI5LDE5LjM3LDQzLjM3LDUyLjEyaC02Ny41NGMxLjU0LDEzLjAzLDExLjgzLDIwLjc0LDI2Ljc0LDIwLjc0LDkuNiwwLDE5LjItMy40MywyNC4xNy04LjkybDExLjgzLDExLjQ5Yy04LjIzLDguOTEtMjEuOTQsMTQuNTctMzYuNTEsMTQuNTctMjcuOTQsMC00NS45NC0xNy42Ni00NS45NC00NS4wOVpNNDY2LjAxLDY5LjYxYy0xLjM3LTEyLjg2LTEwLjYzLTIwLjQtMjQuNjktMjAuNHMtMjEuOTQsNy4wMy0yNC4zNCwyMC40aDQ5LjAzWiIvPgogICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNNDkyLjI0LDkzLjk2YzAtMTkuODksMTcuMTQtMjguNDYsMzQuMjktMjguNDYsOC41NywwLDE4LjY5LDEuNzEsMjUuODksNnYtNS4xNGMwLTEzLjItMTEuMzEtMTcuNDktMjMuNjYtMTcuNDktOS40MywwLTIwLjIzLDIuNzQtMjcuMDksNmwtMi45MS0xNC45MWMxMC4yOS00LjYzLDIyLjQ2LTcuMiwzMy45NC03LjIsMjEuNDMsMCwzOC45Miw5LjQzLDM4LjkyLDMzLjQzdjUzLjgzaC0xNi45N2wtLjM0LTEwLjhjLTYuODYsOS4wOS0xOC4xNywxMy4zNy0yOS40OSwxMy4zNy0xNi42MywwLTMyLjU3LTguNTctMzIuNTctMjguNjNaTTUyOC43NiwxMDYuODJjMTAuNjMsMCwyMy4zMi01LjQ5LDIzLjY2LTE5Ljg5LTYtMy45NC0xNS4yNi02LjM0LTIyLjQ2LTYuMzQtOS43NywwLTE4LjUxLDMuNDMtMTguNTEsMTIuODYsMCwxMC42Myw5LjI2LDEzLjM3LDE3LjMxLDEzLjM3WiIvPgogICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNNTg1LjY3LDc3LjY3YzAtMjcuNzcsMTcuNjYtNDUuMDksNDEuNjYtNDUuMDksMTIuMTcsMCwyMi42Myw0LjExLDI5LjMxLDEwLjk3Vi4wMWgxOS4ydjEyMGgtMTcuMTRsLS4xNy0xMC40NmMtNi41MSw4LjIzLTE3LjgzLDEzLjAzLTMxLjIsMTMuMDMtMjQsMC00MS42Ni0xNy40OS00MS42Ni00NC45MlpNNjU2LjY0LDc3LjVjMC0xNi4xMS0xMC42My0yNy40My0yNS44OS0yNy40M3MtMjUuODksMTEuMzEtMjUuODksMjcuNiwxMC40NiwyNy42LDI1Ljg5LDI3LjYsMjUuODktMTEuNDksMjUuODktMjcuNzdaIi8+CiAgICA8cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik02OTAuMjQsNzcuNjdjMC0yNi4yMywxNy42Ni00NS4wOSw0NS4yNi00NS4wOXM0NS40MywxOC44Niw0NS40Myw0NS4wOS0xNy44Myw0NC45Mi00NS40Myw0NC45Mi00NS4yNi0xOC44Ni00NS4yNi00NC45MlpNNzYxLjczLDc3LjY3YzAtMTUuNi0xMC4xMS0yNy42LTI2LjIzLTI3LjZzLTI2LjA2LDEyLTI2LjA2LDI3LjYsMTAuMTEsMjcuNiwyNi4wNiwyNy42LDI2LjIzLTEyLjE3LDI2LjIzLTI3LjZaIi8+CiAgICA8cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik03OTIuOTIsNzcuNjdjMC0yNi4yMywxNy42Ni00NS4wOSw0NS4yNi00NS4wOXM0NS40MywxOC44Niw0NS40Myw0NS4wOS0xNy44Myw0NC45Mi00NS40Myw0NC45Mi00NS4yNi0xOC44Ni00NS4yNi00NC45MlpNODY0LjQxLDc3LjY3YzAtMTUuNi0xMC4xMS0yNy42LTI2LjIzLTI3LjZzLTI2LjA2LDEyLTI2LjA2LDI3LjYsMTAuMTIsMjcuNiwyNi4wNiwyNy42LDI2LjIzLTEyLjE3LDI2LjIzLTI3LjZaIi8+CiAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik05NDAuNTMsMGgxMS4xNGwyNi45Miw2MC4wMWgtMTAuOTdsLTUuNC0xMi40M2gtMzIuMjNsLTUuNDksMTIuNDNoLTEwLjg5TDk0MC41MywwWk05NTguMzYsMzguNWwtMTIuMjYtMjguMzgtMTIuMjYsMjguMzhoMjQuNTJaIi8+CiAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik05ODcuNDIsMGg5Ljk0djYwLjAxaC05Ljk0VjBaIi8+CiAgPC9nPgo8L3N2Zz4="/>
-<span class="meta"><b>Product Recommender</b> cheat sheet for CS and Sales</span>
+<span class="meta">Product Recommender cheat sheet for CS and Sales</span>
 </div>
 </footer>
 <script>
