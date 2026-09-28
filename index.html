@@ -259,6 +259,9 @@ pre.xml .c{color:#6f8aa8;font-style:italic}
 @media (max-width:600px){.steps7 .dcard{flex-basis:100%}}
 .demo-flat{background:#F9F9FA}
 .demo-flat .live iframe{background:#F9F9FA}
+.subhead{text-align:center;margin:56px 0 4px}
+.subhead h3{font-family:var(--display);font-weight:700;font-size:clamp(24px,2.6vw,32px);color:var(--text);margin:0}
+.subhead h3 .s{color:var(--sky)}
 /* flow */
 .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:f}
 .flow .dcard{position:relative}
@@ -568,6 +571,7 @@ html.pdf-mode #check,html.pdf-mode #trouble{break-before:page}
 <div class="dcard"><div class="k">Step 3</div><h3>The bot searches it</h3><p><b>Product Recommender</b>, a block in the bot, looks for the closest products to what the visitor writes.</p><div class="path">Bot Editor → Artificial Intelligence → Product Recommender</div></div>
 <div class="dcard"><div class="k">Step 4</div><h3>The visitor sees products</h3><p>Product cards with links. The closest one is marked <b>Best match</b>.</p><div class="path">Node settings → Product Details</div></div>
 </div>
+<div class="subhead"><p class="label">Comparison</p><h3>Strict search vs <span class="s">Product Recommender</span></h3></div>
 <div class="vsbox">
 <div class="vsc2">
 <div class="k2">Strict search (a normal shop filter)</div>
@@ -747,6 +751,7 @@ Family SUV, cheap to run for daily commuting.<span class="t">&lt;/g:description&
 
         <ul class="plist">
 <li>Prices are for refresh <b>every 24 hours</b>. More frequent refresh, down to <b>every 1 hour</b>, may cost more.</li>
+<li><b>Automotive:</b> prices may differ and are set individually.</li>
 <li>A smaller feed can mean a lower tier.</li>
 <li>Bigger catalogues: case by case. Always confirm with the current price list.</li>
 </ul>
@@ -754,6 +759,7 @@ Family SUV, cheap to run for daily commuting.<span class="t">&lt;/g:description&
 <div class="faqs">
 <div class="fgrp">Setup</div>
 <details><summary>Which plans include it?</summary><p>None by default. It is a paid add-on, sold as an upsell on top of the plan.</p></details>
+<details><summary>Is a trial possible?</summary><p>Yes. By default we offer a 30-day trial. The offer can be adjusted individually.</p></details>
 <details><summary>How is it switched on?</summary><p>In the <b>Leadoo Admin panel</b>, once the add-on is sold.</p></details>
 <details><summary>Can we use more than 1 Product base?</summary><p>Yes, <b>up to 10</b> per account, set in the <b>Leadoo Admin panel</b>. Each <b>Product Recommender</b> uses <b>1 Product base</b>, so build separate paths.</p></details>
 <details><summary>Can we put other data in an unused field, like location in Gender?</summary><p>No, results become unpredictable. Workaround: Description.</p></details>
